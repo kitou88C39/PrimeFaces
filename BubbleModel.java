@@ -50,12 +50,12 @@ public class BubbleModel {
         yAxis.setLable("Labels");
     }
 
-private BubbleChartModel initBubbleModel(){
-    BubbleCharModel model = new BubbleCharModel();
-    
-    model.add(new BubbleChartSeries)("JAVA Book",70,23,55));
-    model.add(new BubbleChartSeries)("PYTHON Book",10,63,95));
+    private BubbleChartModel initBubbleModel() {
+        BubbleChartModel model = new BubbleChartModel();
 
-    return model;
+        model.add(new BubbleChartSeries("JAVA Book", 70, 23, 55));
+        model.add(new BubbleChartSeries("PYTHON Book", 10, 63, 95));
+
+        return model;
     }
 }
