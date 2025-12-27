@@ -10,36 +10,37 @@ public class ContextMenu {
 
     public MenuModel menuModel;
 
-@PostConstruct
-public void init() {
+    @PostConstruct
+    public void init() {
 
-    menuModel = new DefaultMenuModel();
-    DefaultMenuModel menuItem = new DefaultMenuModel();
-    menuItem.setValue("Home");
-    menuItem.setUrl("https://www.");
-    menuModel.addElement(menuItem);
+        menuModel = new DefaultMenuModel();
+        DefaultMenuModel menuItem = new DefaultMenuModel();
+        menuItem.setValue("Home");
+        menuItem.setUrl("https://www.");
+        menuModel.addElement(menuItem);
 
-    DefaultMenuItem menuItem1 = new DefaultMenuModel();
-    menuItem.setValue("JSF");
-    menuItem.setUrl("https://www.");
-    menuModel.addElement(menuItem);
+        DefaultMenuItem menuItem1 = new DefaultMenuModel();
+        menuItem.setValue("JSF");
+        menuItem.setUrl("https://www.");
+        menuModel.addElement(menuItem);
 
-    DefaultMenuItem menuItem2 = new DefaultMenuModel();
-    menuItem.setValue("Prime Faces");
-    menuItem.setUrl("https://www.");
-    menuModel.addElement(menuItem2);
+        DefaultMenuItem menuItem2 = new DefaultMenuModel();
+        menuItem.setValue("Prime Faces");
+        menuItem.setUrl("https://www.");
+        menuModel.addElement(menuItem2);
 
-    DefaultMenuItem menuItem3 = new DefaultMenuModel();
-    menuItem.setValue("JavaFx");
-    menuItem.setUrl("https://www.");
-    menuModel.addElement(menuItem);
+        DefaultMenuItem menuItem3 = new DefaultMenuModel();
+        menuItem.setValue("JavaFx");
+        menuItem.setUrl("https://www.");
+        menuModel.addElement(menuItem);
+    }
 
     public MenuModel getMenuModel() {
         return menuModel;
     }
 
     public void setMenuModel(MenuModel menuModel) {
-        this.menuModel1 = menuModel1;
+        this.menuModel = menuModel;
     }
 
     public void back() {
