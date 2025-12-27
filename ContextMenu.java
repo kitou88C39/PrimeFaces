@@ -1,6 +1,9 @@
 
 import javax.faces.bean.ManagedBean;
 import javax.annotation.PostConstruct;
+import org.primefaces.model.menu.MenuModel;
+import org.primefaces.model.menu.DefaultMenuModel;
+import org.primefaces.model.menu.DefaultMenuItem;
 
 @ManagedBean(name = "mb")
 public class ContextMenu {
