@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:h="http://xmlns.jcp.org/jsf/html"
+  xmlns:p="http://primefaces.org/ui"
+  xmlns:f="http://xmlns.jcp.org/jsf/core"
+>
+  <h:head>
+    <title>SelectOneButton Submit Demo</title>
+  </h:head>
+  <h:body>
+    <h:form>
+      <p:growl id="msgs" showDetail="true" />
+
+      <h:panelGrid columns="2" style="margin-bottom: 10px" cellpadding="5">
+        <p:outputLabel for="lng" value="Select a Language:" />
+
+        <p:selectOneButton id="lng" value="#{lang.language}">
+          <f:selectItem itemLabel="Java" itemValue="java" />
+          <f:selectItem itemLabel="Python" itemValue="python" />
+          <f:selectItem itemLabel="Ruby" itemValue="ruby" />
+        </p:selectOneButton>
+
+        <p:commandButton
+          value="Submit"
+          update="display msgs"
+          icon="pi pi-check"
+          actionListener="#{lang.displaySelected}"
+        />
+
+        <p:spacer height="10" />
+
+        <h:outputText value="Selected Language:" />
+        <h:outputText
+          id="display"
+          value="#{lang.language}"
+          style="font-weight: bold"
+        />
+      </h:panelGrid>
+    </h:form>
+  </h:body>
+</html>
