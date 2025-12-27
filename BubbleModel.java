@@ -1,4 +1,9 @@
 
+import javax.faces.bean.ManagedBean;
+import javax.annotation.PostConstruct;
+import org.primefaces.model.chart.BubbleChartModel;
+import org.primefaces.model.chart.BubbleChartSeries;
+
 @ManagedBean(name = "bubbleChart")
 public class BubbleModel {
 
@@ -10,11 +15,11 @@ public class BubbleModel {
         createBubbleModels();
     }
 
-    public BubbleCharModel getBubbleModel() {
+    public BubbleChartModel getBubbleModel() {
         return bubbleModel;
     }
 
-    public void setBubbleModel(BubbleCharModel bubbleModel1) {
+    public void setBubbleModel(BubbleChartModel bubbleModel1) {
         this.bubbleModel1 = bubbleModel1;
     }
 
