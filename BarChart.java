@@ -1,3 +1,6 @@
+import javax.faces.bean.ManagedBean;
+import javax.annotation.PostConstruct;
+
 @ManagedBean(name="barChart")
 public class BarChart {
     
