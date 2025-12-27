@@ -1,5 +1,8 @@
 import javax.faces.bean.ManagedBean;
 import javax.annotation.PostConstruct;
+import org.primefaces.model.chart.DonutChartModel;
+import java.util.Map;
+import java.util.LinkedHashMap;
 
 @ManagedBean(name = "donutChart")
 public class DonutCharts {
