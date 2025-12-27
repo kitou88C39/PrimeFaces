@@ -1,27 +1,32 @@
 import javax.faces.bean.ManagedBean;
 import javax.annotation.PostConstruct;
+import org.primefaces.model.chart.LineChartModel;
+import org.primefaces.model.chart.LineChartSeries;
+import org.primefaces.model.chart.Axis;
+import org.primefaces.model.chart.AxisType;
+import org.primefaces.model.chart.CategoryAxis;
 
 @ManagedBean(name = "areaChar")
 public class AreaModel {
 
-    private LineCharModel areaModel;
+    private LineChartModel areaModel;
 
     @PostConstruct
     public void init() {
         createAreaModel();
     }
 
-    public LineCharModel getAreaModel() {
+    public LineChartModel getAreaModel() {
         return areaModel;
     }
 
-    public void setAreaModel(LineCharModel areaModel) {
+    public void setAreaModel(LineChartModel areaModel) {
         this.areaModel = areaModel;
     }
 
     private void createAreaModel() {
 
-        areaModel = new LineCharModel();
+        areaModel = new LineChartModel();
 
         LineChartSeries java = new LineChartSeries();
         java.setFill(true);
