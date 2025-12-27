@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:h="http://xmlns.jcp.org/jsf/html"
+  xmlns:p="http://primefaces.org/ui"
+  xmlns:f="http://xmlns.jcp.org/jsf/core"
+>
+  <h:head>
+    <title>SelectCheckboxMenu Demo</title>
+  </h:head>
+  <h:body>
+    <h:form>
+      <h:panelGrid columns="2" cellpadding="5">
+        <p:outputLabel for="menu" value="Basic: " />
+        <p:selectCheckboxMenu
+          id="menu"
+          value="#{checkboxView.selectedColors}"
+          label="Colors"
+          updateLabel="true"
+          filter="true"
+          filterMatchMode="startsWith"
+          panelStyle="width:250px"
+        >
+          <f:selectItems value="#{checkboxView.colors}" />
+        </p:selectCheckboxMenu>
+
+        <p:outputLabel for="multiple" value="Multiple: " />
+        <p:selectCheckboxMenu
+          id="multiple"
+          value="#{checkboxView.selectedColors2}"
+          label="Cities"
+          multiple="true"
+          updateLabel="true"
+          filter="true"
+          filterMatchMode="startsWith"
+          panelStyle="width:250px"
+        >
+          <f:selectItems value="#{checkboxView.colors}" />
+        </p:selectCheckboxMenu>
+      </h:panelGrid>
+
+      <p:commandButton value="Submit" update="@form" style="margin-top: 10px" />
+    </h:form>
+  </h:body>
+</html>
