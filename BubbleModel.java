@@ -1,4 +1,7 @@
 
+import javax.faces.bean.ManagedBean;
+import javax.annotation.PostConstruct;
+
 @ManagedBean(name = "bubbleChart")
 public class BubbleModel {
 
