@@ -31,7 +31,7 @@ public class BarChart {
         createHorizontalBarModel();
     }
 
-    private void createBarModels() {
+    private void createBarModel() {
         barModel = initBarModel();
 
         barModel = setTitle("Bar Chart");
@@ -46,27 +46,28 @@ public class BarChart {
         yAxis.setLable(200);
     }
 
-    private void createHorizontalBarModer(){
+    private void createHorizontalBarModel() {
         HorizontalBarModel model = new HorizontalBarModel();
 
         ChartSeries java = new ChartSeries();
         java.setLabel("JAVA");
-        java.set("2004",120);
-        java.set("2005",100);
-        java.set("2006",44);
-        java.set("2007",150);
-        java.set("2008",25);
+        java.set("2004", 120);
+        java.set("2005", 100);
+        java.set("2006", 44);
+        java.set("2007", 150);
+        java.set("2008", 25);
 
         ChartSeries python = new ChartSeries();
         python.setLabel("PYTHON");
-        python.set("2004",52);
-        python.set("2005",60);
-        python.set("2006",220);
-        python.set("2007",10);
-        python.set("2008",200);
+        python.set("2004", 52);
+        python.set("2005", 60);
+        python.set("2006", 220);
+        python.set("2007", 10);
+        python.set("2008", 200);
 
         model.addSeries(java);
         model.addSeries(python);
 
         horizontalBarCharModel = model;
     }
+}
