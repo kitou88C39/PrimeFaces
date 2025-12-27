@@ -1,12 +1,12 @@
 import javax.faces.bean.ManagedBean;
 import javax.annotation.PostConstruct;
 import org.primefaces.model.chart.LineChartModel;
-import org.primefaces.model.chart.LineChartSeries;
+import org.primefaces.model.chart.ChartSeries;
 import org.primefaces.model.chart.Axis;
 import org.primefaces.model.chart.AxisType;
 import org.primefaces.model.chart.CategoryAxis;
 
-@ManagedBean(name = "areaChar")
+@ManagedBean(name = "areaChart")
 public class AreaModel {
 
     private LineChartModel areaModel;
@@ -28,8 +28,7 @@ public class AreaModel {
 
         areaModel = new LineChartModel();
 
-        LineChartSeries java = new LineChartSeries();
-        java.setFill(true);
+        ChartSeries java = new ChartSeries();
         java.setLabel("JAVA");
         java.set("2004", 120);
         java.set("2005", 100);
@@ -37,8 +36,7 @@ public class AreaModel {
         java.set("2007", 150);
         java.set("2008", 25);
 
-        LineChartSeries python = new LineChartSeries();
-        python.setFill(true);
+        ChartSeries python = new ChartSeries();
         python.setLabel("PYTHON");
         python.set("2004", 52);
         python.set("2005", 60);
