@@ -2,7 +2,7 @@ import javax.faces.bean.ManagedBean;
 import javax.annotation.PostConstruct;
 
 @ManagedBean(name = "donutChart")
-public class BubbleModel {
+public class DonutCharts {
 
     private DonutChartModel donutModel1;
     private DonutChartModel donutModel2;
@@ -28,7 +28,7 @@ public class BubbleModel {
         createDonutModels();
     }
 
-    private void createDonutModel() {
+    private void createDonutModels() {
         donutModel1 = initDonutModel();
         donutModel1 = setTitle("Donut Chart");
         donutModel1 = setLegendPosition("w");
@@ -43,7 +43,7 @@ public class BubbleModel {
         donutModel2 = setShow(false);
     }
 
-    private DonutCharModel initDonutModel(){
+    private DonutCharModel initDonutModel() {
         DonutCharModel model = new DonutCharModel();
 
         Map<String, Number> circle1 = new LinkedHashMap<String, Number>();
@@ -63,3 +63,4 @@ public class BubbleModel {
 
         return model;
     }
+}
