@@ -1,4 +1,7 @@
 
+import javax.faces.bean.ManagedBean;
+import javax.annotation.PostConstruct;
+
 @ManagedBean(name = "mb")
 public class ContextMenu {
 
