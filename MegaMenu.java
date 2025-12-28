@@ -1,5 +1,5 @@
 @ManagedBean(name = "mb")
-public class BeanModel {
+public class MegaMenu {
 
     private String crientation = "horizontal";
 
