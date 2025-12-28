@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Menu</title>
+    </h:head>
+    <h:body>
+        <h:form id="form">
+            <p:growl id="messages" showDetail="true" />
+
+<h3 style="margin-top:0">Menu Example-1</h3>
+            <p:menu>
+            <p:submenu>
+                <p:menuitem value="File" action="#{mb.file}" update="messages" />
+                <p:menuitem value="Edit" action="#{mb.edit}" update="messages" />
+            </p:submenu>
+            <p:submenu>
+<p:menuitem value="View" action="#{mb.view}" update="messages" />
+            </p:submenu>
+            <p:menuitem value="JSF" action="#" update="messages" />
+                <p:menuitem value="Prime Faces" />
+            </p:submenu>
+            </p:menu>
+<h3 style="margin-top:0">Menu Example-2</h3>
+<p:commandButton id="btn" value="show" type="button"/>
+<p:menu overlay="true" trigger="btn" my="left top" at="left bottom">
+<p:submenu label="With Ajax">
+<p:menuitem value="File" action="#{mb.file}" update="messages"/>
+<p:menuitem value="Edit" action="#{mb.edit}" update="messages"/>
+</p:submenu>
+<p:submenu label="Without Ajax">
+<p:menuitem value="View" action="#{mb.view}" update="messages" ajax="false"/>
+</p:submenu>
+<p:submenu label="Tutorial">
+<p:menuitem value="JSF" action="#" />
+<p:menuitem value="Prime Faces" />
+</p:submenu>
+</p:menu>
+
+<h3>Toggleable Menu</h3>
+<p:menu model="#{mb.model}"/>
+           
+        </h:form>
+    </h:body>
+</html>
