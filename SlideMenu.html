@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:h="http://xmlns.jcp.org/jsf/html"
+  xmlns:p="http://primefaces.org/ui"
+>
+  <h:head>
+    <title>Context Menu</title>
+  </h:head>
+  <h:body>
+    <h:form>
+      <p:growl id="messages" showDetail="true" />
+
+      <p:slideMenu style="width: 200px">
+        <p:subMenu label="With Ajax">
+          <p:menuitem value="File" action="#{mb.file}" update="messages" />
+          <p:menuitem value="Edit" action="#{mb.edit}" update="messages" />
+        </p:subMenu>
+
+        <p:separator />
+
+        <p:subMenu label="Courses">
+          <p:subMenu label="Ripples Code">
+            <p:menuitem value="JSF" url="https://www.youtube.com" />
+            <p:menuitem value="PrimeFaces" url="https://www.youtube.com" />
+          </p:subMenu>
+          <p:menuitem value="Tech Diary" />
+        </p:subMenu>
+      </p:slideMenu>
+
+      <p:separator />
+
+      <p:commandButton id="btn2" value="Click Me (Overlay)" type="button" />
+      <p:slideMenu
+        overlay="true"
+        trigger="btn2"
+        my="left top"
+        at="left bottom"
+        style="width: 180px"
+      >
+        <p:subMenu label="With Ajax">
+          <p:menuitem value="File" action="#{mb.file}" update="messages" />
+          <p:menuitem value="Edit" action="#{mb.edit}" update="messages" />
+        </p:subMenu>
+        <p:subMenu label="Without Ajax">
+          <p:menuitem value="View" action="#{mb.view}" update="false" />
+        </p:subMenu>
+        <p:separator />
+        <p:menuitem value="Tech Diary" />
+      </p:slideMenu>
+    </h:form>
+  </h:body>
+</html>
