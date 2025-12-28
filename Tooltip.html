@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:h="http://xmlns.jcp.org/jsf/html"
+  xmlns:p="http://primefaces.org/ui"
+>
+  <h:head>
+    <title>Tooltip</title>
+  </h:head>
+  <h:body>
+    <h:form>
+      <p:panelGrid columns="3" cellpadding="8">
+        <h:outputText value="Example-1: " />
+        <h:inputText
+          id="focusInput"
+          title="Tooltip displayed if the input gets focus "
+        />
+        <p:tooltip
+          id="toolTipFocus"
+          for="focusInput"
+          showEvent="focus"
+          hideEvent="blur"
+        />
+
+        <h:outputText value="Example-2: " />
+        <h:outputLink id="fade" value="#">
+          <h:outputText value="PrimeFaces" />
+        </h:outputLink>
+        <p:tooltip
+          id="toolTipFade"
+          for="fade"
+          value="Position is top"
+          position="top"
+        />
+
+        <h:outputText value="Example-3: " />
+        <h:outputLink id="track" value="#">
+          <h:outputText value="Track Mouse" />
+        </h:outputLink>
+        <p:tooltip
+          id="toolTipTrack"
+          for="track"
+          value="Will track the mouse position"
+          trackMouse="true"
+        />
+
+        <h:outputText value="Example-4: " />
+        <h:outputLink id="grow" value="#">
+          <h:outputText value="Clip-Explode Effects" />
+        </h:outputLink>
+        <p:tooltip
+          id="toolTipGrow"
+          for="grow"
+          value="Clip/Explode Animation"
+          showEffect="clip"
+          hideEffect="explode"
+          position="right"
+        />
+
+        <h:outputText value="Example-5: " />
+        <h:outputLink id="content" value="#">
+          <h:outputText value="Ripples Code" />
+        </h:outputLink>
+        <p:tooltip id="toolTipContent" for="content" position="bottom">
+          <p:graphicImage value="/Images/ripplescode.png" />
+        </p:tooltip>
+      </p:panelGrid>
+    </h:form>
+  </h:body>
+</html>
