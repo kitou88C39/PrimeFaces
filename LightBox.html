@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:h="http://xmlns.jcp.org/jsf/html"
+  xmlns:f="http://xmlns.jcp.org/jsf/core"
+  xmlns:p="http://primefaces.org/ui"
+>
+  <h:head>
+    <title>LightBox</title>
+  </h:head>
+  <h:body>
+    <h:form id="form">
+      <h3>Image Gallery</h3>
+      <p:lightBox styleClass="imagebox" id="lightbox1">
+        <h:outputLink value="/Image/sea.jpg" title="Sea">
+          <h:graphicImage
+            value="/Image/sea.jpg"
+            id="sea"
+            style="height: 77px; width: 100px"
+          />
+        </h:outputLink>
+
+        <h:outputLink value="/Image/car.jpg" title="Car">
+          <h:graphicImage
+            value="/Image/car.jpg"
+            id="car"
+            style="height: 77px; width: 100px"
+          />
+        </h:outputLink>
+
+        <h:outputLink value="/Image/mountain.jpg" title="Mountain">
+          <h:graphicImage
+            value="/Image/mountain.jpg"
+            id="mountain"
+            style="height: 77px; width: 100px"
+          />
+        </h:outputLink>
+      </p:lightBox>
+
+      <h3>Inline Content</h3>
+      <p:lightBox id="lightbox2">
+        <h:outputLink value="#">
+          <h:outputText value="View Video Content" />
+        </h:outputLink>
+
+        <f:facet name="inline">
+          <p:media
+            value="https://www.youtube.com/v/XXXXX"
+            width="400"
+            height="300"
+            player="flash"
+          />
+        </f:facet>
+      </p:lightBox>
+
+      <h3>IFrame</h3>
+      <p:lightBox iframe="true" id="lightbox3">
+        <h:outputLink value="https://www.primefaces.org">
+          <h:outputText value="Ripples Code" />
+        </h:outputLink>
+      </p:lightBox>
+    </h:form>
+  </h:body>
+</html>
