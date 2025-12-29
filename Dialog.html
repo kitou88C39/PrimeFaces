@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:h="http://xmlns.jcp.org/jsf/html"
+  xmlns:p="http://primefaces.org/ui"
+>
+  <h:head>
+    <title>Dialog</title>
+  </h:head>
+  <h:body>
+    <h:form id="form">
+      <h:panelGrid columns="1" cellpadding="5">
+        <p:commandButton
+          value="Basic Dialog"
+          type="button"
+          onclick="PF('dlg1').show()"
+        />
+        <p:commandButton
+          value="Modal Dialog"
+          type="button"
+          onclick="PF('dlg2').show()"
+        />
+        <p:commandButton
+          value="Dialog with Effect"
+          type="button"
+          onclick="PF('dlg3').show()"
+        />
+      </h:panelGrid>
+
+      <p:dialog header="Basic Dialog" widgetVar="dlg1" minHeight="40">
+        <h:outputText value="This is a Basic Dialog" />
+      </p:dialog>
+
+      <p:dialog
+        header="Modal Dialog"
+        widgetVar="dlg2"
+        modal="true"
+        minHeight="100"
+      >
+        <h:outputText value="This is a Modal Dialog (Background is disabled)" />
+      </p:dialog>
+
+      <p:dialog
+        header="Dialog with Effects"
+        widgetVar="dlg3"
+        showEffect="explode"
+        hideEffect="bounce"
+        height="100"
+      >
+        <h:outputText value="This is a Dialog with Effects" />
+      </p:dialog>
+    </h:form>
+  </h:body>
+</html>
