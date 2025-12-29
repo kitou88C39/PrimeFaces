@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:h="http://xmlns.jcp.org/jsf/html"
+  xmlns:f="http://xmlns.jcp.org/jsf/core"
+  xmlns:p="http://primefaces.org/ui"
+>
+  <h:head>
+    <title>LightBox</title>
+  </h:head>
+  <h:body>
+    <h:form id="form">
+      <p:commandButton value="Left"oncomplete="PF('sidebar1')".show()" />
+      <p:commandButton value="Right"oncomplete="PF('sidebar2')".show()" />
+      <p:commandButton value="Top"oncomplete="PF('sidebar3')".show()" />
+      <p:commandButton value="Bottom"oncomplete="PF('sidebar4')".show()" />
+      <p:commandButton value="Fullscreen"oncomplete="PF('sidebar3')".show()" />
+
+      <p:sidebar widgetVar="sidebar1">
+        <h1 style="font-weight: normal">Left Sidebar</h1>
+        <p:commandButton value="Cancel" oncomplete="FF('sidebar1').hide()" />
+      </p:sidebar>
+
+      <p:sidebar widgetVar="sidebar2">
+        <h1 style="font-weight: normal">Right Sidebar</h1>
+        <p:commandButton value="Cancel" oncomplete="FF('sidebar2').hide()" />
+      </p:sidebar>
+
+      <p:sidebar widgetVar="sidebar3">
+        <h1 style="font-weight: normal">Top Sidebar</h1>
+        <p:commandButton value="Cancel" oncomplete="FF('sidebar3').hide()" />
+      </p:sidebar>
+
+      <p:sidebar widgetVar="sidebar4">
+        <h1 style="font-weight: normal">Bottom Sidebar</h1>
+        <p:commandButton value="Cancel" oncomplete="FF('sidebar4').hide()" />
+      </p:sidebar>
+
+      <p:sidebar widgetVar="sidebar5">
+        <h1 style="font-weight: normal">Fullscreen Sidebar</h1>
+        <p:commandButton value="Cancel" oncomplete="FF('sidebar5').hide()" />
+      </p:sidebar>
+    </h:form>
+  </h:body>
+</html>
