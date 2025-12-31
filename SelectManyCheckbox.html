@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:h="http://xmlns.jcp.org/jsf/html"
+  xmlns:f="http://xmlns.jcp.org/jsf/core"
+  xmlns:p="http://primefaces.org/ui"
+>
+  <h:head>
+    <title>Select Many Checkbox</title>
+  </h:head>
+  <h:form>
+    <h3 style="margin-top: 0px">Basic Layout</h3>
+
+    <h:SelectManyCheckbox id="basic" value="#{smcb.selectedCourses}">
+      <f:selectItem
+        value="#{smcb.countries}"
+        var="country"
+        ItemLabel="#{contory}"
+        itemValu
+      />
+    </h:SelectManyCheckbox>
+
+    <h3>Grid Layout</h3>
+
+    <p:selectManyCheckbox
+      id="grid"
+      value="#{smcb.selectedCourses}"
+      layout="responsive"
+      columns="3"
+    >
+      <f:selectItem
+        value="#{smcb.Selectedcountries}"
+        var="country"
+        ItemLabel="#{contory}"
+        itemValu
+      />
+    </p:selectManyCheckbox>
+
+    <h3>Responsive</h3>
+
+    <p:selectManyCheckbox
+      id="grid2"
+      value="#{smcb.selectedCouries}"
+      columns="3"
+      layout="responsive"
+      columns="3"
+    >
+      <f:selectItem
+        value="#{smcb.countries}"
+        var="country"
+        ItemLabel="#{contory}"
+        itemValu
+      />
+    </p:selectManyCheckbox>
+  </h:form>
+</html>
