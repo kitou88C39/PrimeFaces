@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:h="http://xmlns.jcp.org/jsf/html"
+  xmlns:f="http://xmlns.jcp.org/jsf/core"
+  xmlns:p="http://primefaces.org/ui"
+>
+  <h:head>
+    <title>Date Picker</title>
+    <script type="text/javascript">
+      // 関数名をテンプレート指定と合わせる (dateTemplateFunc)
+      function dateTemplateFunc(date) {
+          return '<span style="background-color:' + ((date.day &lt; 21 &amp;&amp; date.day &gt; 10) ? '#81C784' : 'inherit') + ';border-radius:50%;padding: .25em;width: 1.75em; height:1.75em; display:block;">' + date.day + '</span>';
+      }
+    </script>
+  </h:head>
+
+  <h:body>
+    <h:form id="form">
+      <p:growl id="msgs" showDetail="true" skipDetailIfEqualsSummary="true" />
+
+      <p:panelGrid columns="2" cellpadding="5">
+        <p:outputLabel for="inline" value="Inline:" />
+        <p:datePicker id="inline" value="#{dpb.selectedDate}" inline="true">
+          <p:ajax
+            event="dateSelect"
+            listener="#{dpb.onDateSelect}"
+            update="msgs"
+          />
+        </p:datePicker>
+
+        <p:outputLabel for="popup" value="Popup:" />
+        <p:datePicker id="popup" value="#{dpb.selectedDate}">
+          <p:ajax
+            event="dateSelect"
+            listener="#{dpb.onDateSelect}"
+            update="msgs"
+          />
+        </p:datePicker>
+
+        <p:outputLabel for="range" value="Range Selection:" />
+        <p:datePicker
+          id="range"
+          value="#{dpb.selectedMultiDate}"
+          selectionMode="range"
+          readonlyInput="true"
+        >
+          <p:ajax
+            event="dateSelect"
+            listener="#{dpb.onDateSelectMulti}"
+            update="msgs"
+          />
+        </p:datePicker>
+
+        <p:outputLabel for="month" value="Month Picker:" />
+        <p:datePicker
+          id="month"
+          value="#{dpb.selectedDate}"
+          view="month"
+          pattern="MM/yyyy"
+          yearNavigator="true"
+          yearRange="2020:2050"
+        >
+          <p:ajax
+            event="dateSelect"
+            listener="#{dpb.onDateSelect}"
+            update="msgs"
+          />
+        </p:datePicker>
+
+        <p:outputLabel for="dateTemplate" value="Date Template: " />
+        <p:datePicker
+          id="dateTemplate"
+          value="#{dpb.selectedDate}"
+          dateTemplate="dateTemplateFunc"
+        >
+          <p:ajax
+            event="dateSelect"
+            listener="#{dpb.onDateSelect}"
+            update="msgs"
+          />
+        </p:datePicker>
+
+        <p:outputLabel for="disabledDD" value="Disabled Dates: " />
+        <p:datePicker
+          id="disabledDD"
+          value="#{dpb.selectedDate}"
+          disabledDays="#{dpb.invalidDays}"
+          disabledDates="#{dpb.invalidDates}"
+        >
+          <p:ajax
+            event="dateSelect"
+            listener="#{dpb.onDateSelect}"
+            update="msgs"
+          />
+        </p:datePicker>
+
+        <p:outputLabel for="button" value="Show Icon (Button): " />
+        <p:datePicker id="button" value="#{dpb.selectedDate}" showIcon="true">
+          <p:ajax
+            event="dateSelect"
+            listener="#{dpb.onDateSelect}"
+            update="msgs"
+          />
+        </p:datePicker>
+
+        <p:outputLabel for="buttonbar" value="Button Bar: " />
+        <p:datePicker
+          id="buttonbar"
+          value="#{dpb.selectedDate}"
+          showButtonBar="true"
+        >
+          <p:ajax
+            event="dateSelect"
+            listener="#{dpb.onDateSelect}"
+            update="msgs"
+          />
+        </p:datePicker>
+
+        <p:outputLabel for="minmax" value="Min-Max: " />
+        <p:datePicker
+          id="minmax"
+          value="#{dpb.selectedDate}"
+          mindate="#{dpb.minDate}"
+          maxdate="#{dpb.maxDate}"
+        >
+          <p:ajax
+            event="dateSelect"
+            listener="#{dpb.onDateSelect}"
+            update="msgs"
+          />
+        </p:datePicker>
+
+        <p:outputLabel for="multi" value="Multiple Months: " />
+        <p:datePicker id="multi" value="#{dpb.selectedDate}" numberOfMonths="3">
+          <p:ajax
+            event="dateSelect"
+            listener="#{dpb.onDateSelect}"
+            update="msgs"
+          />
+        </p:datePicker>
+
+        <p:outputLabel for="time" value="Time: " />
+        <p:datePicker
+          id="time"
+          value="#{dpb.selectedDate}"
+          showTime="true"
+          hourFormat="24"
+        >
+          <p:ajax
+            event="dateSelect"
+            listener="#{dpb.onDateSelectWithTime}"
+            update="msgs"
+          />
+        </p:datePicker>
+      </p:panelGrid>
+    </h:form>
+  </h:body>
+</html>
