@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:h="http://xmlns.jcp.org/jsf/html"
+  xmlns:f="http://xmlns.jcp.org/jsf/core"
+  xmlns:p="http://primefaces.org/ui"
+>
+  <h:head>
+    <title>Inplace</title>
+  </h:head>
+  <h:body>
+    <h:form>
+      <h:panelGrid columns="2" columnClasses="column" cellpadding="5">
+        <h:outputLabe for="basic" value="Basic: " />
+        <p:inplace id="basic">
+          <h:inputText value="Edit Me " />
+        </p:inplace>
+
+        <h:outputLabe for="ajax" value="Ajax: " />
+        <p:inplace id="image" label="Show" effect="slide">
+          <h:inputText value="#{ib.display}" required="true" label="text" />
+        </p:inplace>
+
+        <h:outputLabe for="event" value="Doble Click" />
+        <p:inplace id="event" label="courses" effectSpeed="fast">
+          event="dblclick">
+          <h:selsectOneMenu>
+            <f:selectItem itemLabel="JSF" itemValue="0" />
+            <f:selectItem itemLabel="Android" itemValue="1" />
+            <f:selectItem itemLabel="Flutter" itemValue="2" />
+            <f:selectItem itemLabel="React" itemValue="3" />
+          </h:selsectOneMenu>
+        </p:inplace>
+      </h:panelGrid>
+    </h:form>
+  </h:body>
+</html>
