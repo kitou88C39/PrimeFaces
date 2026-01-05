@@ -1,5 +1,5 @@
 package JakartaEE.cdi.example.sec02;
 
-public class MyService {
+public class MyService1 {
 
 }
