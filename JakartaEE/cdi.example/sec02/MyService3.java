@@ -7,4 +7,3 @@ public class MyService3 implements MyService {
     public String getMessage() {
         return "Hello World";
     }
-}
