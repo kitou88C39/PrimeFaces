@@ -1,8 +1,8 @@
 package JakartaEE.cdi.example.sec04;
 
-import jakarta.enterprise.context.Dependent;
+import jakarta.inject.Inject;
+import jakarta.inject.Named;
 
-@Dependent
 public class CDIApp {
 
     @Inject
@@ -10,7 +10,7 @@ public class CDIApp {
     private MyService myService;
 
     public void run() {
-        System.out.println("Hello CDIApp sec03");
+        System.out.println("Hello CDIApp sec04");
         System.out.println(this.myService.getMessage());
     }
 }
