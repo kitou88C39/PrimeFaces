@@ -6,6 +6,7 @@ import jakarta.enterprise.context.Dependent;
 public class CDIApp {
 
     @Inject
+    @Named("myService2")
     private MyService myService;
 
     public void run() {
