@@ -1,7 +1,7 @@
 package JakartaEE.cdi.example.sec04;
 
+@Default
 @MyQualifier1
-@Named
 public class MyService2 implements MyService1 MyService{
 
     @Override
