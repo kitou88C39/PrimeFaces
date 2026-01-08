@@ -1,5 +1,8 @@
 package JakartaEE.cdi.example.sec06;
 
+import jakarta.enterprise.inject.Default;
+import jakarta.enterprise.inject.Produces;
+
 @MyQualifier1
 public class MyService1 implements MyService {
     private final String message;
@@ -15,5 +18,11 @@ public class MyService1 implements MyService {
     @Override
     public String getMessage() {
         return this.message;
+    }
+
+    @Produces
+    @Default
+    public MyService getMyService() {
+        return new MyService1("@Produces");
     }
 }
