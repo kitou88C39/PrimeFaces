@@ -18,6 +18,15 @@ public class CDIApp {
 
     public void run() {
         System.out.println("Hello CDIApp sec07");
-        System.out.println(this.myService.getMessage());
+        List.of(this.myService11, this.myService12, this.myService13)
+        .forEach(->{
+            sv.countUp();
+            System.out.println(sv.getMessage());
+            });
+        List.of(this.myService21, this.myService22, this.myService23)
+        .forEach(->{
+            sv.countUp();
+            System.out.println(sv.getMessage());
+            });
     }
 }
