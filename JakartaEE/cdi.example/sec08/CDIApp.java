@@ -1,6 +1,8 @@
 package JakartaEE.cdi.example.sec08;
 
-import jakarta.util.List;
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestory;
+import jakarta.inject.Inject;
 
 public class CDIApp {
     @Inject
@@ -12,5 +14,18 @@ public class CDIApp {
 
     public void run() {
         System.out.println("Hello CDIApp sec08");
+        System.out.println("this.myService1.getMessage()");
+        System.out.println("this.myService2.getMessage()");
+        System.out.println("this.myService3.getMessage()");
+    }
+
+    @PostConstruct
+    public void postConstruct() {
+        System.err.println("CDIApp sec08 @PostConstruct");
+    }
+
+    @PreDestory
+    public void preDestory() {
+        System.err.println("CDIApp sec08 @PreDestory");
     }
 }
