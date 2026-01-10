@@ -1,5 +1,8 @@
 package JakartaEE.cdi.example.sec08;
 
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestory;
+
 public class MyService {
     String getMessage();return"Hello MyService sec08";
 
