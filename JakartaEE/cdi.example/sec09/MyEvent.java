@@ -8,7 +8,6 @@ public class MyEvent {
     }
 
     public String getMessage() {
-        return message;
+        return this.message;
     }
-
 }
