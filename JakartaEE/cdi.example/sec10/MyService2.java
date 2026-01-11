@@ -9,7 +9,10 @@ public class MyService2 implements MyService {
 
     @inject
     @Delegate
+    private MyService myService;
+
+    @Override
     public String getMessage() {
-        return "Hello from MyService2";
+        return "@Decorator MyService2: " + this.myService.getMessage() + ;
     }
 }
