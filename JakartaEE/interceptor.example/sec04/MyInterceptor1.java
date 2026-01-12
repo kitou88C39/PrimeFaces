@@ -10,7 +10,7 @@ public class MyInterceptor1 {
     @AroundInvoke
     public Object aroundInvoke(InvocationContext context) throws Exception {
         System.out.println("MyInterceptor1 - before proceed");
-        String clazz = context.getTarget().getClass().getName();
+        String clazz = context.getMethod().getDeclaringClass().getName();
         String method = context.getMethod().getName();
         System.out.println("¥tclazz=" + clazz + "method=" + method);
         Object result = context.proceed();
