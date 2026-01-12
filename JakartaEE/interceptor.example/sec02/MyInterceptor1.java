@@ -4,6 +4,7 @@ import jakarta.interceptor.AroundInvoke;
 import jakarta.interceptor.Interceptor;
 import jakarta.interceptor.InvocationContext;
 
+@MyBinding
 @Interceptor
 public class MyInterceptor1 {
     @AroundInvoke
