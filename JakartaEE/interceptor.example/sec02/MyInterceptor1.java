@@ -5,7 +5,7 @@ import jakarta.interceptor.Interceptor;
 import jakarta.interceptor.InvocationContext;
 
 @Interceptor
-public class MyService1 {
+public class MyInterceptor1 {
     @AroundInvoke
     public Object intercept(InvocationContext context) throws Exception {
         System.out.println("MyInterceptor1 - before invocation");
