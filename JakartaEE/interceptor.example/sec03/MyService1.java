@@ -4,7 +4,9 @@ import jakarta.interceptor.AroundInvoke;
 import jakarta.interceptor.Interceptor;
 import jakarta.interceptor.InvocationContext;
 
+@MyBinding
 @Interceptor
+@Priority(Intercepter.Priority.APPLICATION + 1)
 public class MyService1 {
     @AroundInvoke
     public Object aroundInvoke(InvocationContext context) throws Exception {
