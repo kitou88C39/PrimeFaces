@@ -7,7 +7,7 @@ import jakarta.interceptor.InvocationContext;
 @MyBinding
 @Interceptor
 @Priority(Intercepter.Priority.APPLICATION + 1)
-public class MyService1 {
+public class MyInterceptor1 {
     @AroundInvoke
     public Object aroundInvoke(InvocationContext context) throws Exception {
         System.out.println("MyInterceptor1 - before proceed");
