@@ -8,9 +8,9 @@ import jakarta.interceptor.InvocationContext;
 public class MyService1 {
     @AroundInvoke
     public Object intercept(InvocationContext context) throws Exception {
-        System.out.println("MyInterceptor - Before method invocation");
+        System.out.println("MyInterceptor1 - before invocation");
         Object result = context.proceed();
-        System.out.println("MyInterceptor - After method invocation");
+        System.out.println("MyInterceptor1 - after invocation");
         return result;
     }
 }
