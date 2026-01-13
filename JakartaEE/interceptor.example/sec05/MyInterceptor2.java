@@ -5,7 +5,6 @@ import jakarta.interceptor.Interceptor;
 import jakarta.interceptor.InvocationContext;
 
 @Interceptor
-@Priority(Intercepter.Priority.APPLICATION + 2)
 public class MyInterceptor2 {
     @AroundInvoke
     public Object aroundInvoke(InvocationContext context) throws Exception {
