@@ -3,6 +3,9 @@ package JakartaEE.interceptor.example.sec06;
 import jakarta.interceptor.AroundInvoke;
 import jakarta.interceptor.Interceptor;
 import jakarta.interceptor.InvocationContext;
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
+import jakarta.interceptor.AroundConstruct;
 
 @Interceptor
 public class MyInterceptor {
@@ -19,8 +22,15 @@ public class MyInterceptor {
         System.out.println("MyInterceptor - Before method invocation");
         context.proceed();
         System.out.println("MyInterceptor - Before method invocation");
-
+    }
 
     @PostConstruct
+    public void postConstruct(InvocationContext context) throws Exception {
+        System.out.println("MyInterceptor - Before method invocation");
+    }
+
     @PreDestroy
+    public void preDestroy(InvocationContext context) throws Exception {
+        System.out.println("MyInterceptor - Before method invocation");
+    }
 }
