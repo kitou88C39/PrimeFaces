@@ -7,7 +7,7 @@ public class CDIApp {
     private MyService myService;
 
     public void run() {
-        System.out.println("Hello CDIApp sec01");
+        System.out.println("Hello CDIApp sec06");
         this.myService.sayHello("MyService");
     }
 }
