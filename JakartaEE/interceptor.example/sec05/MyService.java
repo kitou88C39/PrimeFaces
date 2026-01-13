@@ -9,4 +9,8 @@ public class MyService {
         System.out.println("Hello1" + name + "!");
     }
 
+    @interceptors(MyInterceptor2.class)
+    public String sayHello1(String name) {
+        System.out.println("Hello2" + name + "!");
+    }
 }
