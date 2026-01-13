@@ -13,4 +13,14 @@ public class MyInterceptor {
         System.out.println("MyInterceptor - After method invocation");
         return result;
     }
+
+    @AroundConstruct
+    public void AroundConstruct(InvocationContext context) throws Exception {
+        System.out.println("MyInterceptor - Before method invocation");
+        context.proceed();
+        System.out.println("MyInterceptor - Before method invocation");
+
+
+    @PostConstruct
+    @PreDestroy
 }
