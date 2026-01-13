@@ -1,10 +1,12 @@
 package JakartaEE.interceptor.example.sec05;
 
-import jakarta.annotation.Priority;
+import jakarta.interceptor.Interceptors;
 
-@MyBinding
+@Interceptors(MyInterceptor1.class)
 public class MyService {
-    public String sayHello(String name) {
-        System.out.println("Hello" + name + "!");
+    @interceptors(MyInterceptor2.class)
+    public String sayHello1(String name) {
+        System.out.println("Hello1" + name + "!");
     }
+
 }
