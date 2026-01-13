@@ -8,6 +8,7 @@ public class CDIApp {
 
     public void run() {
         System.out.println("Hello CDIApp sec05");
-        this.myService.sayHello("MyService");
+        this.myService.sayHello1("MyService");
+        this.myService.sayHello2("MyService");
     }
 }
