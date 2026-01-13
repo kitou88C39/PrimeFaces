@@ -19,18 +19,18 @@ public class MyInterceptor {
 
     @AroundConstruct
     public void AroundConstruct(InvocationContext context) throws Exception {
-        System.out.println("MyInterceptor - Before method invocation");
+        System.out.println("MyInterceptor - Before method proceed");
         context.proceed();
-        System.out.println("MyInterceptor - Before method invocation");
+        System.out.println("MyInterceptor - Before method proceed");
     }
 
     @PostConstruct
     public void postConstruct(InvocationContext context) throws Exception {
-        System.out.println("MyInterceptor - Before method invocation");
+        System.out.println("MyInterceptor - postConstruct");
     }
 
     @PreDestroy
     public void preDestroy(InvocationContext context) throws Exception {
-        System.out.println("MyInterceptor - Before method invocation");
+        System.out.println("MyInterceptor - preDestroy");
     }
 }
