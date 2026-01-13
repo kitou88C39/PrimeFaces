@@ -25,12 +25,12 @@ public class MyInterceptor {
     }
 
     @PostConstruct
-    public void postConstruct(InvocationContext context) throws Exception {
-        System.out.println("MyInterceptor - postConstruct");
+    public void postConstruct(InvocationContext context) {
+        System.out.println("MyInterceptor - postConstruct()");
     }
 
     @PreDestroy
-    public void preDestroy(InvocationContext context) throws Exception {
-        System.out.println("MyInterceptor - preDestroy");
+    public void preDestroy(InvocationContext context) {
+        System.out.println("MyInterceptor - preDestroy()");
     }
 }
