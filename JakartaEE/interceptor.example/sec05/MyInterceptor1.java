@@ -1,7 +1,6 @@
 package JakartaEE.interceptor.example.sec05;
 
 import jakarta.interceptor.*;
-import java.util.Arrays
 
 @Interceptor
 public class MyInterceptor1 {
