@@ -1,22 +1,19 @@
 package JakartaEE.interceptor.example.sec09;
 
 import jakarta.ejb.Stateless;
-import jakarta.ejb.EJB;
-import ui.HelloBean;
-import jakarta.interceptor.Interceptors;
+import jakarta.ejb.Schedule;
+import jakarta.ejb.Timer;
 
 @Stateless()
-@Interceptors({ MyInterceptor.class })
 public class HelloBean9 {
-    @EJB
-    private HelloBean hellobean;
 
     public void sayHello(String name) {
         System.out.println("Hello " + name + "!");
-        this.hellobean.sayHello("@EJB");
     }
 
-    public void sayHello(Timer timer) {
+    @Schedule(hour = "*", minute = "*", second = "*/10", persistent = false)
+    public void timeout(Timer timer) {
         System.out.println("Timeout9 method executed");
 
+    }
 }
