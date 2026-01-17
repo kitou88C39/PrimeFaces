@@ -11,5 +11,6 @@ public class HelloBean8 {
 
     public void sayHello(String name) {
         System.out.println("Hello " + name + "!");
+        this.hellobean.sayHello("Enterprise Beans");
     }
 }
