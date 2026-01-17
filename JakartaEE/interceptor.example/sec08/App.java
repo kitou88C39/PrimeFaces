@@ -7,7 +7,7 @@ public class App {
     public static void main(String[] args) {
         try(EJBContainer ejbContainer = EJBContainer.createEJBContainer()
         Context context = ejbContainer.getContext();
-        HelloBean8 hellobean = (HelloBean8)context.lookup("");
+        HelloBean8 hellobean = (HelloBean8)context.lookup("java:global/classes/HelloBean8!HelloBean8");
         helloBean.sayHello("Enterprise Beans");
     }catch(
 
