@@ -1,0 +1,18 @@
+package JakartaEE.interceptor.example.sec09;
+
+import jakarta.ejb.EJBContainer;
+import jakarta.naming.Context;
+
+public class App {
+    public static void main(String[] args) {
+        try(EJBContainer ejbContainer = EJBContainer.createEJBContainer()
+        Context context = ejbContainer.getContext();
+        HelloBean8 hellobean = (HelloBean8)context.lookup("java:global/classes/HelloBean8!HelloBean8");
+        helloBean.sayHello("Enterprise Beans");
+    }catch(
+
+    Exception e)
+    {
+        e.printStackTrace();
+    }
+}
